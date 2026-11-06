@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright and Touch Service – Nettoyage de canapés, sols et douches</title>
+  <meta name="description" content="Nettoyage à domicile de canapés, matelas, tapis, sols, douches et meubles. Devis gratuit.">
+  <meta name="theme-color" content="#0B6E7F">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><img src="images/logo.png" alt="Logo Bright and Touch Service"><span>Bright and Touch</span></a>
+  <button class="lang" id="lang" aria-label="Langue / Language">🌐 EN</button>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+  <nav id="menu">
+    <a href="#resultats" data-i18n="nav1">Résultats</a>
+    <a href="#services" data-i18n="nav2">Services</a>
+    <a href="#faq" data-i18n="nav3">FAQ</a>
+    <a class="btn small" href="#contact" data-i18n="nav4">Devis gratuit</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <span class="bub" style="left:6%;width:38px;height:38px"></span>
+  <span class="bub" style="left:24%;width:22px;height:22px;animation-delay:2s"></span>
+  <span class="bub" style="left:48%;width:46px;height:46px;animation-delay:5s"></span>
+  <span class="bub" style="left:70%;width:28px;height:28px;animation-delay:1s"></span>
+  <span class="bub" style="left:90%;width:52px;height:52px;animation-delay:3.5s"></span>
+
+  <div class="hero-in">
+    <p class="kicker" data-i18n="kicker">✨ Nettoyage à domicile</p>
+    <h1><span data-i18n="h1a">Redonner de l'éclat à votre</span> <span class="swap" id="swap">espace</span></h1>
+    <p class="lead" data-i18n="lead">Canapés, matelas, tapis, sols, douches et meubles : nous venons chez vous et tout redevient propre et frais.</p>
+    <div class="cta">
+      <a class="btn gold" data-wa target="_blank" href="#" data-i18n="cta1">Devis gratuit sur WhatsApp</a>
+      <a class="btn ghost" href="#resultats" data-i18n="cta2">Voir les résultats</a>
+    </div>
+    <ul class="trust"><li data-i18n="tr1">À domicile</li><li data-i18n="tr2">Devis gratuit</li><li data-i18n="tr3">Produits sûrs</li></ul>
+  </div>
+
+  <div class="hv"><div class="ring"></div><img src="images/logo.png" alt="Bright and Touch Service"></div>
+
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,80 L0,80 Z" fill="#fff"/></svg>
+</section>
+
+<section class="band">
+  <div><b>🏠</b><span data-i18n="b1">100% à domicile</span></div>
+  <div><b>🧾</b><span data-i18n="b2">Devis gratuit</span></div>
+  <div><b>💬</b><span data-i18n="b3">Réponse sur WhatsApp</span></div>
+  <div><b>🧽</b><span data-i18n="b4">6 types de nettoyage</span></div>
+</section>
+
+<section id="resultats">
+  <div class="in">
+    <h2 data-i18n="r1">Sale, puis propre</h2>
+    <p class="sub" data-i18n="r2">Faites glisser pour voir la différence.</p>
+    <div class="tabs">
+      <button class="tab on" data-k="canape">🛋️ <span data-i18n="t1">Canapé</span></button>
+      <button class="tab" data-k="sol">🧼 <span data-i18n="t2">Sol</span></button>
+      <button class="tab" data-k="douche">🚿 <span data-i18n="t3">Douche</span></button>
+    </div>
+    <div class="ba" id="ba">
+      <div class="layer" id="la"></div>
+      <div class="layer" id="lb"></div>
+      <span class="tag" style="left:12px" data-i18n="tg1">Avant</span>
+      <span class="tag" style="right:12px" data-i18n="tg2">Après</span>
+      <div class="handle"></div>
+      <input type="range" min="0" max="100" value="50" id="sl" aria-label="Avant / Après">
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="in">
+    <h2 data-i18n="s0">Nos services</h2>
+    <div class="grid">
+      <div class="card"><i>01</i><h3 data-i18n="c1">Canapés et fauteuils</h3><p data-i18n="d1">Taches, odeurs et acariens en moins.</p></div>
+      <div class="card"><i>02</i><h3 data-i18n="c2">Matelas</h3><p data-i18n="d2">Désinfection et séchage rapide.</p></div>
+      <div class="card"><i>03</i><h3 data-i18n="c3">Tapis et moquettes</h3><p data-i18n="d3">Lavage en profondeur, couleurs avivées.</p></div>
+      <div class="card"><i>04</i><h3 data-i18n="c4">Sols</h3><p data-i18n="d4">Carrelage, marbre, parquet : brillance retrouvée.</p></div>
+      <div class="card"><i>05</i><h3 data-i18n="c5">Douches et salles de bain</h3><p data-i18n="d5">Calcaire, moisissures et joints noircis.</p></div>
+      <div class="card"><i>06</i><h3 data-i18n="c6">Meubles et rideaux</h3><p data-i18n="d6">Tables, chaises, armoires, voilages.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="in">
+    <h2 data-i18n="y0">Pourquoi nous choisir ?</h2>
+    <div class="why">
+      <div><b>⚡</b><span data-i18n="y1">Intervention rapide</span></div>
+      <div><b>🌿</b><span data-i18n="y2">Produits sans danger</span></div>
+      <div><b>🏠</b><span data-i18n="y3">On vient chez vous</span></div>
+      <div><b>💯</b><span data-i18n="y4">Satisfaction garantie</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="in">
+    <h2 data-i18n="e0">Comment ça se passe</h2>
+    <ol class="steps">
+      <li data-i18n="e1"><b>Vous nous écrivez</b> et envoyez une photo.</li>
+      <li data-i18n="e2"><b>Vous recevez un devis</b> gratuit, sans surprise.</li>
+      <li data-i18n="e3"><b>Nous venons chez vous</b> avec tout le matériel.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="in">
+    <h2 data-i18n="f0">Questions fréquentes</h2>
+    <details><summary data-i18n="q1">Où intervenez-vous ?</summary><p data-i18n="a1">Chez vous, dans votre ville et ses environs. Écrivez-nous votre quartier pour confirmer.</p></details>
+    <details><summary data-i18n="q2">Comment obtenir un prix ?</summary><p data-i18n="a2">Envoyez-nous une photo et une description sur WhatsApp ou par e-mail : le devis est gratuit.</p></details>
+    <details><summary data-i18n="q3">Faut-il préparer quelque chose ?</summary><p data-i18n="a3">Non. Nous apportons le matériel et les produits.</p></details>
+    <details><summary data-i18n="q4">Combien de temps dure l'intervention ?</summary><p data-i18n="a4">Cela dépend de la surface et de l'état. Nous vous donnons une durée avec le devis.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="in">
+    <h2 data-i18n="k0">Demander un devis</h2>
+    <div class="contact">
+      <div class="infos">
+        <a data-wa target="_blank" href="#" data-i18n="k1">💬 WhatsApp : écrivez-nous</a>
+        <a data-tel href="#">📞 <span class="t-tel"></span></a>
+        <a data-email href="#">✉️ brightandtouchservice@gmail.com</a>
+        <div data-i18n="k2">🕖 Lundi – Samedi : 7h – 18h</div>
+      </div>
+      <form id="form">
+        <input type="text" id="nom" data-ph="p1" placeholder="Votre nom" required>
+        <input type="text" id="quartier" data-ph="p2" placeholder="Votre quartier" required>
+        <select id="service">
+          <option value="Canapé / fauteuils" data-i18n="o1">Canapé / fauteuils</option>
+          <option value="Matelas" data-i18n="o2">Matelas</option>
+          <option value="Tapis / moquette" data-i18n="o3">Tapis / moquette</option>
+          <option value="Sols" data-i18n="o4">Sols</option>
+          <option value="Douche / salle de bain" data-i18n="o5">Douche / salle de bain</option>
+          <option value="Meubles / rideaux" data-i18n="o6">Meubles / rideaux</option>
+          <option value="Plusieurs choses" data-i18n="o7">Plusieurs choses</option>
+        </select>
+        <textarea id="msg" rows="3" data-ph="p3" placeholder="Détails (facultatif)"></textarea>
+        <button class="btn" type="submit" data-i18n="k3">Envoyer sur WhatsApp</button>
+        <p class="hint" data-i18n="hint">Vous serez redirigé vers WhatsApp : il suffit d'appuyer sur Envoyer.</p>
+        <button class="btn line" type="button" id="mailbtn" data-i18n="k4">Envoyer par e-mail</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="images/logo.png" alt="">
+  <p><b>Bright and Touch Service</b></p>
+  <p data-i18n="ft">Redonner de l'éclat à votre espace</p>
+  <p><a data-email href="#">brightandtouchservice@gmail.com</a></p>
+</footer>
+
+<a class="wa" data-wa target="_blank" href="#" aria-label="WhatsApp">💬</a>
+<button class="totop" id="totop" aria-label="↑">↑</button>
+
+<div class="bar">
+  <a data-tel href="#" data-i18n="bar1">📞 Appeler</a>
+  <a data-wa target="_blank" href="#">💬 WhatsApp</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
