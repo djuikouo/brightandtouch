@@ -146,20 +146,71 @@ new IntersectionObserver((es, o) => {
 const texte = () =>
   `Bonjour, je suis ${$("#nom").value} (${$("#quartier").value}). Je souhaite un devis pour : ${$("#service").value}. ${$("#msg").value}\n(Langue du client : ${lang === "en" ? "anglais" : "français"})`;
 
-$("#form").onsubmit = e => {
-  e.preventDefault();
-  window.open("https://wa.me/" + CONFIG.wa + "?text=" + encodeURIComponent(texte()), "_blank");
-};
-$("#mailbtn").onclick = () => {
-  if (!$("#nom").value || !$("#quartier").value) {
-    alert(lang === "en" ? "Please enter your name and neighbourhood." : "Merci d'indiquer votre nom et votre quartier.");
-    return;
-  }
-  location.href = "mailto:" + CONFIG.email +
-    "?subject=" + encodeURIComponent("Demande de devis – " + $("#service").value) +
-    "&body=" + encodeURIComponent(texte());
+// Formulaire
+const services = () => [...$$("#choix input:checked")].map(c => c.value);
+
+const ERR = {
+  fr: { nom: "Merci d'indiquer votre nom.", quartier: "Merci d'indiquer votre quartier.", service: "Merci de cocher au moins un service." },
+  en: { nom: "Please enter your name.", quartier: "Please enter your neighbourhood.", service: "Please tick at least one service." }
 };
 
+function valider() {
+  let e = "";
+  if (!$("#nom").value.trim()) { e = ERR[lang].nom; $("#nom").focus(); }
+  else if (!$("#quartier").value.trim()) { e = ERR[lang].quartier; $("#quartier").focus(); }
+  else if (!services().length) { e = ERR[lang].service; }
+  $("#erreur").textContent = e;
+  return !e;
+}
+
+// Le message d'erreur disparaît dès que le client corrige
+["input", "change"].forEach(ev => $("#form").addEventListener(ev, () => $("#erreur").textContent = ""));
+$("#lang").addEventListener("click", () => $("#erreur").textContent = "");
+
+// Message envoyé : écrit en français pour toi, avec la langue du client
+const texte = () =>
+  `Bonjour, je suis ${$("#nom").value.trim()} (${$("#quartier").value.trim()}). Je souhaite un devis pour : ${services().join(", ")}. ${$("#msg").value}\n(Langue du client : ${lang === "en" ? "anglais" : "français"})`;
+
+// Formulaire
+const services = () => [...$$("#choix input:checked")].map(c => c.value);
+
+const ERR = {
+  fr: { nom: "Merci d'indiquer votre nom.", quartier: "Merci d'indiquer votre quartier.", service: "Merci de cocher au moins un service." },
+  en: { nom: "Please enter your name.", quartier: "Please enter your neighbourhood.", service: "Please tick at least one service." }
+};
+
+function valider() {
+  let e = "";
+  if (!$("#nom").value.trim()) { e = ERR[lang].nom; $("#nom").focus(); }
+  else if (!$("#quartier").value.trim()) { e = ERR[lang].quartier; $("#quartier").focus(); }
+  else if (!services().length) { e = ERR[lang].service; }
+  $("#erreur").textContent = e;
+  return !e;
+}
+
+// Le message d'erreur disparaît dès que le client corrige
+["input", "change"].forEach(ev => $("#form").addEventListener(ev, () => $("#erreur").textContent = ""));
+$("#lang").addEventListener("click", () => $("#erreur").textContent = "");
+
+// Message envoyé : écrit en français pour toi, avec la langue du client
+const texte = () =>
+  `Bonjour, je suis ${$("#nom").value.trim()} (${$("#quartier").value.trim()}). Je souhaite un devis pour : ${services().join(", ")}. ${$("#msg").value}\n(Langue du client : ${lang === "en" ? "anglais" : "français"})`;
+
+const services = () => [...$$("#choix input:checked")].map(c => c.value);
+
+const ERR = {
+  fr: { nom: "Merci d'indiquer votre nom.", quartier: "Merci d'indiquer votre quartier.", service: "Merci de cocher au moins un service." },
+  en: { nom: "Please enter your name.", quartier: "Please enter your neighbourhood.", service: "Please tick at least one service." }
+};
+
+function valider() {
+  let e = "";
+  if (!$("#nom").value.trim()) { e = ERR[lang].nom; $("#nom").focus(); }
+  else if (!$("#quartier").value.trim()) { e = ERR[lang].quartier; $("#quartier").focus(); }
+  else if (!services().length) { e = ERR[lang].service; }
+  $("#erreur").textContent = e;
+  return !e;
+}
 // Apparition au défilement
 const items = $$(".card, .why div, .steps li, details, .ba, form, .infos a, h2");
 items.forEach((el, i) => { el.classList.add("reveal"); el.style.transitionDelay = (i % 3) * 0.12 + "s"; });
