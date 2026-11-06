@@ -133,23 +133,28 @@
         <a data-email href="#">✉️ brightandtouchservice@gmail.com</a>
         <div data-i18n="k2">🕖 Lundi – Samedi : 7h – 18h</div>
       </div>
-      <form id="form">
-        <input type="text" id="nom" data-ph="p1" placeholder="Votre nom" required>
-        <input type="text" id="quartier" data-ph="p2" placeholder="Votre quartier" required>
-        <select id="service">
-          <option value="Canapé / fauteuils" data-i18n="o1">Canapé / fauteuils</option>
-          <option value="Matelas" data-i18n="o2">Matelas</option>
-          <option value="Tapis / moquette" data-i18n="o3">Tapis / moquette</option>
-          <option value="Sols" data-i18n="o4">Sols</option>
-          <option value="Douche / salle de bain" data-i18n="o5">Douche / salle de bain</option>
-          <option value="Meubles / rideaux" data-i18n="o6">Meubles / rideaux</option>
-          <option value="Plusieurs choses" data-i18n="o7">Plusieurs choses</option>
-        </select>
-        <textarea id="msg" rows="3" data-ph="p3" placeholder="Détails (facultatif)"></textarea>
-        <button class="btn" type="submit" data-i18n="k3">Envoyer sur WhatsApp</button>
-        <p class="hint" data-i18n="hint">Vous serez redirigé vers WhatsApp : il suffit d'appuyer sur Envoyer.</p>
-        <button class="btn line" type="button" id="mailbtn" data-i18n="k4">Envoyer par e-mail</button>
-      </form>
+      <form id="form" novalidate>
+  <input type="text" id="nom" data-ph="p1" placeholder="Votre nom">
+  <input type="text" id="quartier" data-ph="p2" placeholder="Votre quartier">
+
+  <fieldset class="choix" id="choix">
+    <legend data-i18n="lg">Que faut-il nettoyer ? (cochez un ou plusieurs)</legend>
+    <label><input type="checkbox" value="Canapé / fauteuils"><span data-i18n="o1">Canapé / fauteuils</span></label>
+    <label><input type="checkbox" value="Matelas"><span data-i18n="o2">Matelas</span></label>
+    <label><input type="checkbox" value="Tapis / moquette"><span data-i18n="o3">Tapis / moquette</span></label>
+    <label><input type="checkbox" value="Sols"><span data-i18n="o4">Sols</span></label>
+    <label><input type="checkbox" value="Douche / salle de bain"><span data-i18n="o5">Douche / salle de bain</span></label>
+    <label><input type="checkbox" value="Meubles / rideaux"><span data-i18n="o6">Meubles / rideaux</span></label>
+  </fieldset>
+
+  <textarea id="msg" rows="3" data-ph="p3" placeholder="Détails (facultatif)"></textarea>
+
+  <p class="erreur" id="erreur" role="alert"></p>
+
+  <button class="btn" type="submit" data-i18n="k3">Envoyer sur WhatsApp</button>
+  <p class="hint" data-i18n="hint">Vous serez redirigé vers WhatsApp : il suffit d'appuyer sur Envoyer.</p>
+  <button class="btn line" type="button" id="mailbtn" data-i18n="k4">Envoyer par e-mail</button>
+</form>
     </div>
   </div>
 </section>
